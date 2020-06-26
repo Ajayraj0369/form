@@ -1,7 +1,8 @@
-import React, { useState, useReducer } from "react";
+import React, { useReducer } from "react";
 import "../App.css";
 import Authenticate from "./Authenticate";
 
+//reducer function
 function loginReducer(state, action) {
   switch (action.type) {
     case "form": {
@@ -51,6 +52,7 @@ function loginReducer(state, action) {
   return state;
 }
 
+//initial state
 const initialState = {
   username: "",
   password: "",
@@ -59,7 +61,8 @@ const initialState = {
   isloggedin: false,
 };
 
-const Loginreducer = () => {
+//function
+const LoginUseReducer = () => {
   const [state, dispatch] = useReducer(loginReducer, initialState);
 
   const { username, password, loading, errors, isloggedin } = state;
@@ -125,4 +128,4 @@ const Loginreducer = () => {
   );
 };
 
-export default Loginreducer;
+export default LoginUseReducer;

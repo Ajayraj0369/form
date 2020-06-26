@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
-import Loginreducer from "./llayout/Loginreducer";
+import LoginUseReducer from "./llayout/LoginUseReducer";
 
 function App() {
   return (
     <div className="App">
-      <Loginreducer />
+      <LoginUseReducer />
     </div>
   );
 }
